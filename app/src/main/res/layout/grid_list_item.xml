@@ -24,8 +24,10 @@
     app:cardElevation="4dp"
     app:cardCornerRadius="4dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="1dp"
         android:layout_height="wrap_content">
 
         <!-- TODO: Note that this list item will be used in a grid view which requires a
@@ -33,16 +35,56 @@
                 This means that the information within the card must stack the vertically
                 since there is less room in terms of width.-->
 
+
+
+
         <!-- TODO: Create an ImageView resource for the image of the dog.
                The height should be 194dp
                The width should match the with of the card
                The scaleType should be set to centerCrop-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/bella"
+            android:layout_margin="1dp"
+            android:id="@+id/iv_dog_image"
+            android:scaleType="centerCrop"
+            android:layout_height="194dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txt_dog_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <TextView
+            android:id="@+id/txt_dog_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+        <TextView
+            android:id="@+id/txt_dog_hobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+
 
         <!-- TODO: Create a TextView for each of the following:
                 The dog's name
                 The dog's age
                 The dog's hobbies-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
